@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.9.2
+
+- **Paging near a very long verse works again.** Around a verse taller
+  than the screen (such as the Book of Mormon's introductions, or its
+  testimonies on a phone), some keys didn't move or skipped: now n, p,
+  `.` and `,` (and the swipes for them) step through it part by part,
+  and f and b always go to the next book or the start of this one. Only
+  at the very first or last verse is there nowhere to go.
+- f now goes to the book after the one at the top of the screen (before,
+  a book whose start was showing lower on the screen was skipped).
+- Built from EBaC commit `909726f`.
+
 ## 2.9.1
 
 - P downloads the ebook straight from Gutenberg
