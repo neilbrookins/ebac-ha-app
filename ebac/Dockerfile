@@ -17,7 +17,7 @@ FROM ${BUILD_FROM} AS build
 # BUILD_VERSION is this app's version, which Home Assistant passes to the
 # build; EBaC's Information screen shows it ("Home Assistant app 2.1.13").
 ARG BUILD_VERSION
-ARG EBAC_COMMIT=2f2d47bd06a1e1a104c5139f87425d581f0ba250
+ARG EBAC_COMMIT=c63581672fff178448b55cc532ce86842a6265d8
 
 RUN apk add --no-cache build-base ncurses-dev tar
 

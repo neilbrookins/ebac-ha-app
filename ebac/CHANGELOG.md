@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.10.2
+
+- **Hebrew lines are aligned on the right.** A line that is mostly
+  Hebrew now ends at the right edge of the screen, with the spare room
+  on the left, as Hebrew is written. English with a Hebrew word in it,
+  or a line half and half, stays on the left.
+- Built from EBaC commit `c635816`.
+
 ## 2.10.1
 
 - **No more empty space after a very long verse.** On the passage
