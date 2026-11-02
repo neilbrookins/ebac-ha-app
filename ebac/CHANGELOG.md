@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.10.5
+
+- **P (Project Gutenberg) asks before it downloads.** It reads the
+  ebook's small page on gutenberg.org first, shows the title, when it
+  was last updated and its copyright status, and asks whether you agree
+  to the license; the book itself is downloaded only after you say yes
+  (and only if it isn't the version you already have, and there's
+  room).
+- Built from EBaC commit `5c5560f`.
+
 ## 2.10.4
 
 - **The disk can't be filled by adding translations.** Adding (in the
