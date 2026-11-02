@@ -1,5 +1,21 @@
 # Changelog
 
+## 2.10.1
+
+- **No more empty space after a very long verse.** On the passage
+  screen, the last part of a verse taller than the screen is now
+  followed by the verses after it, as many as fit, instead of standing
+  alone.
+- Stepping with `.` onto an empty row no longer leaves part of the
+  "Press ? for menu." prompt behind.
+- Paging back with p through a very long verse shows the screenful just
+  before, even when its start was shown below other verses.
+- **Search results:** p goes back to a very long result (shown cut to
+  fit) from the screen after it; before, it stayed put.
+- Adding a text from Project Gutenberg no longer shows
+  "tr: write error: Broken pipe".
+- Built from EBaC commit `2f2d47b`.
+
 ## 2.10.0
 
 - **Gutenberg texts keep their layout.** The front matter and each
