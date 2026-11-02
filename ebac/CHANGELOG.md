@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.10.7
+
+- **P no longer adds the same version twice.** It now recognizes the
+  version you have by the file's fingerprint, its size and date, or the
+  date on its Gutenberg page, before downloading; and, if none of
+  those can tell, by comparing the downloaded text with yours, adding
+  nothing if they match. (Remove and add the Book of Mormon once more
+  so its copy records all of these.)
+- Reading the ebook's page on gutenberg.org is more forgiving of how
+  the page is laid out, and if it still can't be used, P says why.
+- Built from EBaC commit `a3e05b7`.
+
 ## 2.10.6
 
 - The free-space check before adding now looks at both places a text
