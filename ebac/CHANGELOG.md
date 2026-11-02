@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.10.4
+
+- **The disk can't be filled by adding translations.** Adding (in the
+  app, from Project Gutenberg, or by voice) stops while less than 1 GB
+  is free, with "not enough disk space".
+- **The search history no longer grows without end.** It keeps the
+  newest few thousand searches, dropping the oldest.
+- Removing a Project Gutenberg text (P) takes `r` and digits only.
+- Built from EBaC commit `c4e9b0e`.
+
 ## 2.10.3
 
 - Rebuilt with updated system software (no change to EBaC itself):

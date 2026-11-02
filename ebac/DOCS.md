@@ -107,7 +107,7 @@ Pressing or tapping **E** at the main menu exits EBaC. As with the Terminal app,
 
 ## Your search history
 
-Earlier searches are saved in this app's own storage, so they are kept when Home Assistant restarts, when the app is updated, and in backups. Each Home Assistant user has their own history: what one person searches for is not shown to anyone else.
+Earlier searches are saved in this app's own storage, so they are kept when Home Assistant restarts, when the app is updated, and in backups. Each Home Assistant user has their own history: what one person searches for is not shown to anyone else. It keeps the newest few thousand searches; past that, the oldest are dropped, so it can't grow without end.
 
 ## Voice (with the EBaC integration)
 
@@ -115,7 +115,7 @@ This app also answers Home Assistant's voice assistant, Assist, through the **EB
 
 Unless you allow more, voice can only read, never change anything. Two options, under this app's **Configuration** tab, let the integration add and remove translations by voice ("add translation LITV", "remove translation LITV"). Both are off unless you check them:
 
-- **Allow voice to add translations.** Risk: someone talking to a voice assistant, who needs no password, could add every translation of a language and fill Home Assistant's disk.
+- **Allow voice to add translations.** Risk: someone talking to a voice assistant, who needs no password, could add every translation of a language. Adding stops while less than 1 GB of Home Assistant's disk is free ("not enough disk space"), by voice or in the app, so the disk can't be filled, but the space down to that could be used up.
 - **Allow voice to remove translations** (needs adding allowed too: this page can't stop you checking it alone, but on its own it does nothing, and the app's log says so). Risk: they could delete a translation you paid for, such as the NIV. EBaC's own translations can't be removed.
 
 The integration has its own checkboxes for these as well, and both the app's option and the integration's must be on. After changing an option here, restart the app. A translation added by voice goes at the end of EBaC's list, so EBaC still starts with the same one here.
