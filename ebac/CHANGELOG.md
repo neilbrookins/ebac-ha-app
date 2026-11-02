@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.10.3
+
+- Rebuilt with updated system software (no change to EBaC itself):
+  - Home Assistant base image 3.24-2026.10.1 -> 3.24-2026.10.3
+
 ## 2.10.2
 
 - **Right-to-left lines are aligned on the right.** A line that is

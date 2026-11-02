@@ -9,7 +9,7 @@
 #   1. set EBAC_COMMIT to the new commit of neilbrookins/ebac, and
 #   2. bump "version" in config.yaml, so Home Assistant offers the update.
 
-ARG BUILD_FROM=ghcr.io/home-assistant/base:3.24-2026.10.1
+ARG BUILD_FROM=ghcr.io/home-assistant/base:3.24-2026.10.3
 
 # ---- Stage 1: compile EBaC ----
 FROM ${BUILD_FROM} AS build
