@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.10.0
+
+- **Gutenberg texts keep their layout.** The front matter and each
+  book's heading and summary are shown as the original lays them out:
+  each title line, name and line of contents on its own row, blank lines
+  kept, and each paragraph wrapped to your screen. To see it in a text
+  you've already added (the Book of Mormon), remove it and add it again:
+  P, then r and its number; then P and its number.
+- A very long verse that follows others now starts in the room left
+  below them, instead of on a screen of its own.
+- Built from EBaC commit `6b5f58d`.
+
 ## 2.9.2
 
 - **Paging near a very long verse works again.** Around a verse taller
