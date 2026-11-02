@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.10.6
+
+- The free-space check before adding now looks at both places a text
+  goes: where it is first downloaded, and where translations are kept.
+- The "Allow voice to add translations" option no longer warns about
+  filling the disk, since adding can't.
+- Built from EBaC commit `344fb97`.
+
 ## 2.10.5
 
 - **P (Project Gutenberg) asks before it downloads.** It reads the

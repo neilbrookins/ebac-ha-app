@@ -3,10 +3,7 @@ configuration:
     name: Allow voice to add translations
     description: >-
       Lets the EBaC integration (Assist) download and add translations.
-      Risk: someone speaking to a voice assistant, with no password, could
-      add every translation of a language, using up disk space (adding
-      stops while less than 1 GB is free). The integration has its own
-      checkbox too; both must be on.
+      The integration has its own checkbox too; both must be on.
   allow_remove:
     name: Allow voice to remove translations
     description: >-
