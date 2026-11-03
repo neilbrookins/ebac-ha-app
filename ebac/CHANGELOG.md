@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.10.8
+
+- The **Troubleshooting box** also shows the terminal's size (rows and
+  columns) each time it changes, and which screen EBaC is on, to track
+  down screens that don't fit above the phone's keyboard.
+
 ## 2.10.7
 
 - **P no longer adds the same version twice.** It now recognizes the

@@ -706,9 +706,18 @@
         composing = false;
         noScrollback(t);
         t.parser.registerOscHandler(MODE_OSC, function (name) {
+            if (name !== mode)
+                debug("screen " + name);
             mode = name;
             return true;
         });
+        /* (in the troubleshooting box: the terminal's size, as EBaC and
+           the importers are told it, each time it changes) */
+        if (window.EBAC_DEBUG && t.onResize)
+            t.onResize(function (size) {
+                debug("terminal " + size.rows + " rows x " + size.cols +
+                      (window.visualViewport ? ", vv " + Math.round(window.visualViewport.height) : ""));
+            });
     }
 
     /* keep no scrolled-off lines, so there is nothing to scroll back to */
