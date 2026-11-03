@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.10.10
+
+- In **A**'s lists of languages and translations, paging back with
+  **p** after the keyboard came or went no longer shows a row 0: each
+  page starts where it should for the screen's size.
+- Built from EBaC commit `185c227`.
+
 ## 2.10.9
 
 - **Screens fit above the phone's keyboard.** On phones where the
