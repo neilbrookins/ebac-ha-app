@@ -150,10 +150,73 @@
         term.input(key, true);
     }
 
-    /* the height of the part of the page that can be seen */
+    /* the window whose visible area the keyboard changes: Home Assistant's
+       own page, around the frame this page is in (same site, so it can be
+       read), or this page by itself */
+    function outerWindow() {
+        try {
+            if (window.top !== window && window.top.document)
+                return window.top;
+        } catch (err) {
+            /* (another site: only this page) */
+        }
+        return window;
+    }
+
+    /*
+    ** The height of the part of this page that can be seen: above the
+    ** keyboard. On some phones (the Home Assistant app on Android, say) the
+    ** keyboard is drawn over the page without making it smaller, and only
+    ** the outer page's visual viewport shrinks; this frame keeps its full
+    ** height. So it is measured there: from this frame's top to the bottom
+    ** of what can be seen.
+    */
     function windowHeight() {
-        return window.visualViewport ? window.visualViewport.height
-                                     : window.innerHeight;
+        var w = outerWindow(), vv = w.visualViewport, top = 0, h;
+
+        if (!vv)
+            return window.innerHeight;
+        if (w !== window) {
+            try {
+                top = window.frameElement ?
+                    window.frameElement.getBoundingClientRect().top : 0;
+            } catch (err) {
+                top = 0;
+            }
+        }
+        h = vv.offsetTop + vv.height - top;
+        return (h > 0 && h < window.innerHeight) ? h : window.innerHeight;
+    }
+
+    /*
+    ** Fit the terminal to the part of the page above the keyboard, so that
+    ** EBaC (and the translation importers) are told only the rows that can
+    ** be seen, and draw their screens to fit: ttyd sizes the terminal to
+    ** its container (#terminal-container) when the window is resized, so
+    ** the container is made that height and ttyd told to fit again. With
+    ** no keyboard over the page, it is its full height again.
+    */
+    var fitTimer = null;
+    function fitToVisible() {
+        var box = document.getElementById("terminal-container"),
+            h = Math.floor(windowHeight()), want;
+
+        if (!box)
+            return;
+        want = (h < window.innerHeight - 2) ? h + "px" : "";
+        if (box.style.height === want)
+            return;
+        box.style.height = want;
+        debug("fit to " + (want || "the full height"));
+        window.dispatchEvent(new Event("resize"));      /* ttyd fits */
+    }
+    function fitSoon() {
+        if (fitTimer)
+            clearTimeout(fitTimer);
+        fitTimer = setTimeout(function () {
+            fitTimer = null;
+            fitToVisible();
+        }, 60);
     }
 
     var keyboardUp = false;     /* as of the last resize */
@@ -822,6 +885,16 @@
     }
     if (window.visualViewport)
         window.visualViewport.addEventListener("resize", noteHeight);
+    (function () {
+        var outer = outerWindow(), vv = outer.visualViewport;
+        if (vv) {
+            vv.addEventListener("resize", fitSoon);
+            vv.addEventListener("resize", noteHeight);
+            vv.addEventListener("scroll", fitSoon);
+        }
+        if (outer !== window)
+            outer.addEventListener("resize", fitSoon);
+    }());
 
     /* for testing: which screen the page thinks EBaC is showing */
     window.ebacGestureMode = function () { return mode; };

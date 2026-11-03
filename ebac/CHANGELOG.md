@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.10.9
+
+- **Screens fit above the phone's keyboard.** On phones where the
+  keyboard is drawn over the page instead of making it smaller (the
+  Home Assistant app on Android), EBaC was still told the full height,
+  so the bottom of a screen, such as the list of languages under **A**,
+  was hidden behind the keyboard, and a second page could seem blank.
+  Now the terminal is made only as tall as the part of the page above
+  the keyboard, and every screen is drawn to fit; when the keyboard is
+  hidden, it is the full height again.
+
 ## 2.10.8
 
 - The **Troubleshooting box** also shows the terminal's size (rows and
