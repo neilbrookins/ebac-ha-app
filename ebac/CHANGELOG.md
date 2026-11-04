@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.10.11
+
+- **Backspace keeps working after pasting** (on the search line, say)
+  with a phone's keyboard: after a few, it seemed to stop, as the
+  keyboard was deleting text it thought was still in its typing box.
+  Now each Backspace erases one letter, with any vowel points on it
+  (Hebrew too).
+
 ## 2.10.10
 
 - In **A**'s lists of languages and translations, paging back with

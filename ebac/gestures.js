@@ -750,6 +750,35 @@
             realKeyDown = false;
     }
 
+    /*
+    ** Erasing what the keyboard thinks is still there. After a paste (or a
+    ** word sent), this script empties the typing box, but a phone keyboard
+    ** (Gboard, say) may still hold the text it thinks the box has, and
+    ** turn Backspace into "delete the letter before the cursor" with no key
+    ** of its own. With the box empty, nothing changes, and nothing reached
+    ** EBaC: after a few, Backspace seemed to stop working. So when the
+    ** keyboard asks to delete backwards and there is nothing before the
+    ** cursor in the box, this script sends the erase key (DEL) itself, one
+    ** for each request. (With text in the box, the change is sent as
+    ** before, by onInput.)
+    */
+    function onBeforeInput(e) {
+        var box = term && term.textarea;
+
+        if (!box || e.target !== box || !takesTyping() || realKeyDown)
+            return;
+        if (e.inputType !== "deleteContentBackward" &&
+                e.inputType !== "deleteWordBackward")
+            return;
+        if (composing || box.selectionStart !== 0 || box.selectionEnd !== 0)
+            return;
+        debug("beforeinput " + e.inputType + ", box empty: sent DEL");
+        send("\x7f");
+        e.stopImmediatePropagation();
+        if (e.cancelable)
+            e.preventDefault();
+    }
+
     function onInput(e) {
         if (!term || e.target !== term.textarea || !takesTyping() ||
                 (realKeyDown && !composing))
@@ -816,6 +845,7 @@
         el.addEventListener("compositionstart", onCompositionStart, true);
         el.addEventListener("compositionupdate", onCompositionUpdate, true);
         el.addEventListener("compositionend", onCompositionEnd, true);
+        el.addEventListener("beforeinput", onBeforeInput, true);
         el.addEventListener("input", onInput, true);
         if (t.textarea) {
             t.textarea.addEventListener("blur", onBlur);
