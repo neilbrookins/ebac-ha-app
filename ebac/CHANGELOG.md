@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.12.5
+
+- Nothing new to see: the app now builds its web page, its gestures and
+  its start from EBaC's own `docker/` folder, the same files as EBaC's
+  new standalone Docker image (for people without Home Assistant), so
+  every improvement reaches both. (gestures.js, make-index.sh,
+  ebac-setup, ebac-session and ebac-api's scripts moved there.)
+
 ## 2.12.4
 
 - **Voice understands "Koran", "Coran" and other ways the Qur'an's name

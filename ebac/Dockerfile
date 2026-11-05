@@ -3,7 +3,12 @@
 # EBaC itself is not copied into this repository. It is downloaded from
 # https://github.com/neilbrookins/ebac at the commit below and compiled
 # when Home Assistant installs or updates the app, so there is only one
-# copy of the program's source.
+# copy of the program's source. So are the web page's gestures, ttyd's
+# start, each user's session, EBaC's folder in /data and ebac-api's
+# scripts: they are EBaC's docker/ folder, shared with EBaC's standalone
+# Docker image, so the two never drift apart (see docker/README.md there).
+# Only Home Assistant's own parts are here: config.yaml, the services in
+# rootfs (its options, its login, announcing ebac-api), the docs.
 #
 # To ship a newer EBaC to Home Assistant users:
 #   1. set EBAC_COMMIT to the new commit of neilbrookins/ebac, and
@@ -17,7 +22,7 @@ FROM ${BUILD_FROM} AS build
 # BUILD_VERSION is this app's version, which Home Assistant passes to the
 # build; EBaC's Information screen shows it ("Home Assistant app 2.1.13").
 ARG BUILD_VERSION
-ARG EBAC_COMMIT=f101232b7e095214bc2ffc4812008b80f6bbdcf1
+ARG EBAC_COMMIT=6a3d735d73ce9d00b216b3866d72224186891441
 
 RUN apk add --no-cache build-base ncurses-dev tar
 
@@ -38,7 +43,10 @@ RUN curl -fsSL "https://github.com/neilbrookins/ebac/archive/${EBAC_COMMIT}.tar.
     && mkdir -p /out/AV \
     && cp bible ebac-api ebac-admin index add-translation.sh add-gutenberg.sh trans groups groups.* spoken /out/ \
     && cat index.c both.h utf8.c utf8.h | sha256sum | cut -c1-64 > /out/index.version \
-    && cp AV/* /out/AV/
+    && cp AV/* /out/AV/ \
+    && mkdir -p /out/docker \
+    && cp -r docker/ebac-setup docker/ebac-session docker/ebac-web docker/www \
+             docker/gestures.js docker/make-index.sh /out/docker/
 
 # ---- Stage 2: the app ----
 FROM ${BUILD_FROM}
@@ -53,18 +61,25 @@ RUN apk add --no-cache ttyd ncurses-libs ncurses-terminfo-base curl ca-certifica
         busybox-extras
 
 # EBaC's files: the program, the 'trans' list, the King James text, the
-# index program, the translation importer and the groups of books. (EBaC itself runs from
-# /data/ebac, which links to these: see ebac-setup.)
+# index program, the translation importer and the groups of books. (EBaC
+# itself runs from /data/ebac, which links to these: see ebac-setup.) And
+# the files shared with EBaC's standalone image (EBaC's docker/ folder):
+# ebac-setup, ebac-session and ebac-web, and ebac-api's scripts.
 COPY --from=build /out /usr/share/ebac
+RUN mv /usr/share/ebac/docker/ebac-setup /usr/share/ebac/docker/ebac-session \
+        /usr/share/ebac/docker/ebac-web /usr/bin/ \
+    && mv /usr/share/ebac/docker/www /usr/share/ebac-www \
+    && chmod +x /usr/bin/ebac-setup /usr/bin/ebac-session /usr/bin/ebac-web \
+        /usr/share/ebac-www/cgi-bin/*
 
 # ttyd's web page, with touch gestures added (taps and swipes on a phone
 # become the keys EBaC understands; see gestures.js). Made from the page of
 # the ttyd installed above, so the two always match.
-COPY gestures.js make-index.sh /tmp/
-RUN sh /tmp/make-index.sh /tmp/gestures.js /usr/share/ebac/index.html \
-    && rm /tmp/gestures.js /tmp/make-index.sh
+RUN sh /usr/share/ebac/docker/make-index.sh /usr/share/ebac/docker/gestures.js \
+        /usr/share/ebac/index.html \
+    && rm -r /usr/share/ebac/docker
 
-# The script that starts ttyd with EBaC in it.
+# Home Assistant's services: EBaC in the sidebar, and ebac-api for voice.
 COPY rootfs /
 
 LABEL \
