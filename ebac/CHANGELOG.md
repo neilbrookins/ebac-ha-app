@@ -1,5 +1,20 @@
 # Changelog
 
+## 2.12.3
+
+- **Two more texts from Project Gutenberg** (**A**, then **P**):
+  - **8294**, the World English Bible (**WEB-PG**), with its notes in
+    {braces} as printed. A search finds a word even when a note is
+    joined to it ("God{...}"), and "God created" finds Genesis 1:1.
+  - **16955**, the Qur'an in three translations, added as three:
+    **YUSUFALI-PG** (Abdullah Yusuf Ali), **PICKTHALL-PG** (Marmaduke
+    Pickthall) and **SHAKIR-PG** (Mohammad Habib Shakir). Open EBaC in
+    three windows, one in each, to compare them side by side.
+    References are as the Qur'an is cited (Qur'an 2:255); each surah's
+    name and heading come before its verse 1.
+- Voice reads only the text: notes in {braces} are left out, and a
+  psalm's title is read without its << >>. "Quran" is understood.
+
 ## 2.12.2
 
 - **Notes marked in the Douay-Rheims.** Each of Challoner's notes has
