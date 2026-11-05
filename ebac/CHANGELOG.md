@@ -1,5 +1,20 @@
 # Changelog
 
+## 2.11.0
+
+- **One A for adding, from anywhere.** The main menu's **A** now asks
+  where to add from: **G** (or **1**) for GitHub's Bible translations,
+  as **A** did before, or **P** (or **2**) for Project Gutenberg, which
+  was **P** on the main menu (now gone from it). **X** goes back. More
+  places can be added there later.
+- **Gutenberg texts' names end in -PG**, so the same Bible from both
+  places can be kept side by side: the Douay-Rheims from GitHub is
+  **DRC**, from Project Gutenberg **DRC-PG**. Your Book of Mormon is
+  renamed from **BOM** to **BOM-PG** the next time you press **A**,
+  **P** (it keeps its place). If you chose BOM for voice, choose
+  BOM-PG under the EBaC integration's **Configure**.
+- Built from EBaC commit `01eb514`.
+
 ## 2.10.12
 
 - **Hebrew (and any right-to-left translation) is searched right to

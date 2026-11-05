@@ -11,8 +11,9 @@
  * in EBaC's curses.c), and the gestures depend on it:
  *
  *   screen    tap                              swipe
- *   menu      the nearest of C, A, P, V, S, I   -
- *             or E: that key
+ *   menu      the nearest of C, A, V, S, I    -
+ *             or E (under A: G, P or X):
+ *             that key
  *   trans     the nearest numbered translation  left/right: back, unchanged
  *   transenter  (more than 9 translations, shown a page at a time)
  *             a numbered translation: its       up/down: next/previous page;
@@ -405,7 +406,7 @@
         var pos = rowPos(y), best = null, bestDist = 1, r, m, d;
 
         for (r = 0; r < term.rows; r++) {
-            m = /^\s*([CAPVSIE])\)/.exec(rowText(r));
+            m = /^\s*([A-Z])\)/.exec(rowText(r));
             if (!m)
                 continue;
             d = Math.abs(pos - (r + 0.5));
@@ -450,9 +451,10 @@
             if (!key)
                 return null;
             key = key.toLowerCase();
-            /* View, Search and Add ask for typing next: let the keyboard
-               come up */
-            return { key: key, keyboard: key === "v" || key === "s" || key === "a" || key === "p" };
+            /* View and Search ask for typing next, and so do GitHub and
+               Project Gutenberg (under Add): let the keyboard come up. Add
+               itself is another menu, to tap. */
+            return { key: key, keyboard: key === "v" || key === "s" || key === "g" || key === "p" };
         case "trans":
             key = nearestTranslation(y);
             return key ? { key: key, keyboard: false } : null;
