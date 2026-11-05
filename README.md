@@ -3,11 +3,11 @@
 > [!NOTE]
 > **You are looking at the EBaC app for Home Assistant** (an app, which Home Assistant used to call an add-on: a program that runs beside it, here with a page in its sidebar). [Home Assistant](https://www.home-assistant.io/) is a free smart-home system, often run on a small computer such as a Raspberry Pi and used through a web browser or its phone app. If you have it, this is the easiest way to get EBaC: there's nothing to type or build, it updates itself, and besides the keyboard it works by tapping, swiping and clicking, on a phone, a tablet or a computer's web browser.
 >
-> **Don't use Home Assistant?** This version needs it. To run EBaC directly on Linux (including the Raspberry Pi), Windows, a Mac or Solaris, in a terminal window with the keyboard, go to **[installing EBaC](https://github.com/neilbrookins/ebac#installing)** in the main repository, which has the steps for every other computer, vintage ones too.
+> **Don't use Home Assistant?** This version needs it, but the same EBaC, with the same web page (tapping, swiping and clicking), runs in Docker on any computer that has it: see **[installing with Docker](https://github.com/neilbrookins/ebac#installing-with-docker)**. Or run EBaC in a terminal window, with the keyboard, on Linux (including the Raspberry Pi), Windows, a Mac or Solaris, vintage computers too: **[which way to install](https://github.com/neilbrookins/ebac#which-way-to-install)** compares them all. (Home Assistant without apps, Container or Core? Use the Docker image; the EBaC integration works with it for voice.)
 
 This repository adds **EBaC, the Electronic Bible and Concordance**, to Home Assistant as an app. After installing it, an **EBaC** button appears in the Home Assistant sidebar. Clicking it opens EBaC in a terminal window inside Home Assistant, ready to read and search the Bible with the keyboard, or by tapping, swiping and clicking.
 
-EBaC itself is developed at [neilbrookins/ebac](https://github.com/neilbrookins/ebac), where it also runs as a standalone program on Linux, macOS and Solaris. This repository only packages it for Home Assistant.
+EBaC itself is developed at [neilbrookins/ebac](https://github.com/neilbrookins/ebac), where it also runs in Docker and as a standalone program on Linux, macOS, Windows and Solaris. This repository only packages it for Home Assistant: the web page, its gestures and EBaC's start are EBaC's own (its `docker/` folder), shared with its Docker image, so both always have the same improvements.
 
 ## Contents
 
