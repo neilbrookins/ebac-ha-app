@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.12.0
+
+- **The Douay-Rheims Bible from Project Gutenberg.** Press **A**, **P**
+  and type **1581** to add it, as **DRC-PG** (GitHub's **DRC** can be
+  kept beside it). Unlike GitHub's, it has Challoner's notes, each on
+  lines of its own under the verse it explains (searches find them),
+  each book's introduction and each chapter's summary before its verse
+  1, the psalms' Latin titles, and the edition's appendices (the Prayer
+  of Manasses, 3 and 4 Esdras, and more, in their 1600s spelling).
+- The **P** screen lists the ebooks EBaC knows.
+- Built from EBaC commit `9311b66`.
+
 ## 2.11.0
 
 - **One A for adding, from anywhere.** The main menu's **A** now asks
