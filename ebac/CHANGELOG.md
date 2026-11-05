@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.12.1
+
+- Docs: **Removing EBaC**. Uninstalling the app deletes the
+  translations you added, everyone's search history and its options;
+  how to back up first and get them back, and removing the voice
+  integration too (whose 0.6.3 raises a repair when the app can't be
+  reached). EBaC itself is unchanged.
+
 ## 2.12.0
 
 - **The Douay-Rheims Bible from Project Gutenberg.** Press **A**, **P**

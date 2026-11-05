@@ -119,6 +119,18 @@ Unless you allow more, voice can only read, never change anything. Two options, 
 
 The integration has its own checkboxes for these as well, and both the app's option and the integration's must be on. After changing an option here, restart the app. A translation added by voice goes at the end of EBaC's list, so EBaC still starts with the same one here.
 
+## Removing EBaC
+
+Uninstalling this app permanently deletes its storage, and Home Assistant has no option to keep it:
+
+- every translation you added, from GitHub or Project Gutenberg (such as **BOM-PG** or **DRC-PG**); EBaC's own come back with a reinstall, the added ones don't;
+- every user's search history;
+- this app's options.
+
+If you might want them back, make a backup first: **Settings → System → Backups**, a backup that includes EBaC. Restoring that backup later brings the app back with all of it.
+
+If you use voice, remove the **EBaC integration** too (**Settings → Devices & services → EBaC → Delete**), and remove it from HACS if you like. Left behind, it can only say "EBaC can't be reached"; after 15 minutes of that, it raises a repair under **Settings → Repairs** saying so (integration 0.6.3 or later).
+
 ## Troubleshooting
 
 The **Troubleshooting box** option, under this app's **Configuration** tab, shows a small box in the top right corner of EBaC's page listing what the page sees of the keyboard focus and the window's size (for example, when the phone is turned). A screenshot of it helps track down a problem that happens on one phone but not another. After changing the option, restart the app; leave it off normally.
