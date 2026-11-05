@@ -1,5 +1,20 @@
 # Changelog
 
+## 2.10.12
+
+- **Hebrew (and any right-to-left translation) is searched right to
+  left.** With such a translation chosen, the search line starts at the
+  right edge of the screen and grows to the left as you type or paste;
+  English words and numbers in it still read left to right. Backspace
+  erases the last letter typed, and the arrow keys move the way they
+  point.
+- **Copying Hebrew from the screen works.** Text you highlight is put
+  on the clipboard in reading order (before, its letters came out
+  backwards), so pasting it into a search finds it.
+- Punctuation at the ends of a search word, such as a period or the
+  Hebrew sof pasuq copied along with it, is ignored.
+- Built from EBaC commit `cbe50f1`.
+
 ## 2.10.11
 
 - **Backspace keeps working after pasting** (on the search line, say)

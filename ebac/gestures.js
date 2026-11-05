@@ -790,6 +790,75 @@
             emptyBox();
     }
 
+    /*
+    ** Copying right-to-left text in reading order. EBaC turns Hebrew (and
+    ** any right-to-left script) about to show it, as the terminal shows
+    ** every row left to right (u8_display_order() in EBaC's utf8.c), so a
+    ** selection, copied as it is shown, had its letters backwards: pasted
+    ** into a search, it found nothing. So when a selection has right-to-
+    ** left text in it, it is put on the clipboard turned back, by the same
+    ** rule, which undoes itself: each run of right-to-left letters (with
+    ** the spaces and marks between them) turned about, numbers in it kept
+    ** as they are, and each letter's marks (vowel points) staying with it.
+    ** The spaces that align a row on the right are taken off, and the rows
+    ** joined by a space, so a phrase wrapped on the screen pastes as one
+    ** line (as the search line needs). Other selections are left alone.
+    */
+    function isRtl(ch) {
+        var c = ch.codePointAt(0);
+        return (c >= 0x0590 && c <= 0x08FF) || (c >= 0xFB1D && c <= 0xFDFF) ||
+               (c >= 0xFE70 && c <= 0xFEFF) || (c >= 0x10800 && c <= 0x10FFF) ||
+               (c >= 0x1E800 && c <= 0x1EFFF);
+    }
+
+    function readingOrder(row) {
+        var cl = row.match(/\P{M}\p{M}*|\p{M}+/gu) || [], a, b, m, last, i, j, t;
+        var digit = function (x) { return /^[0-9]/.test(x); };
+        for (a = 0; a < cl.length; a++) {
+            if (!isRtl(cl[a]))
+                continue;
+            last = a;
+            for (m = a + 1; m < cl.length; m++) {
+                if (isRtl(cl[m]))
+                    last = m;
+                else if (/^\p{L}/u.test(cl[m]))
+                    break;              /* left to right again */
+            }
+            for (b = a, m = last; b < m; b++, m--) {
+                t = cl[b]; cl[b] = cl[m]; cl[m] = t;
+            }
+            for (b = a; b <= last; b++) {       /* numbers as they were */
+                if (!digit(cl[b]))
+                    continue;
+                for (m = b; m < last && digit(cl[m + 1]); m++)
+                    ;
+                for (i = b, j = m; i < j; i++, j--) {
+                    t = cl[i]; cl[i] = cl[j]; cl[j] = t;
+                }
+                b = m;
+            }
+            a = last;
+        }
+        return cl.join("");
+    }
+
+    function onCopy(e) {
+        var text, rows;
+
+        if (!term || !term.hasSelection || !term.hasSelection() || !e.clipboardData)
+            return;
+        text = term.getSelection();
+        if (!Array.from(text).some(isRtl))
+            return;
+        rows = text.split(/\r?\n/).map(function (row) {
+            return readingOrder(row.trim());
+        }).filter(function (row) { return row !== ""; });
+        e.clipboardData.setData("text/plain", rows.join(" "));
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        debug("copied in reading order: " + JSON.stringify(rows.join(" ")));
+    }
+
     /* listen for EBaC's "which screen" messages: as soon as the terminal
        exists, before any output arrives */
     function listen(t) {
@@ -890,6 +959,7 @@
     setInterval(check, 50);
     firstSeen[window.innerWidth] = 1;   /* (the starting width: not turning) */
     noteHeight();
+    window.addEventListener("copy", onCopy, true);
     window.addEventListener("resize", noteHeight);
     window.addEventListener("resize", noteWidth);
     window.addEventListener("blur", onPageBlur);
