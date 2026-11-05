@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.12.4
+
+- **Voice understands "Koran", "Coran" and other ways the Qur'an's name
+  is heard**, as well as "Quran". The forms are in a file, `spoken`,
+  beside `groups`: a book to a line, more can be added. After updating,
+  reload the EBaC integration (or restart Home Assistant) so Assist
+  learns them.
+
 ## 2.12.3
 
 - **Two more texts from Project Gutenberg** (**A**, then **P**):

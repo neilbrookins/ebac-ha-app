@@ -17,7 +17,7 @@ FROM ${BUILD_FROM} AS build
 # BUILD_VERSION is this app's version, which Home Assistant passes to the
 # build; EBaC's Information screen shows it ("Home Assistant app 2.1.13").
 ARG BUILD_VERSION
-ARG EBAC_COMMIT=ebbef8c5729673e646d1365f87fade7bb9a09598
+ARG EBAC_COMMIT=f101232b7e095214bc2ffc4812008b80f6bbdcf1
 
 RUN apk add --no-cache build-base ncurses-dev tar
 
@@ -26,7 +26,8 @@ RUN apk add --no-cache build-base ncurses-dev tar
 # Kept too: the index program; the translation importers
 # (add-translation.sh, for A)dd a translation, and add-gutenberg.sh, for
 # P)roject Gutenberg); the groups of books (groups, groups.KJVA: =nt in a
-# search); ebac-api (EBaC's answers in JSON, for the EBaC integration's
+# search); other forms of books' names, as voice may hear them (spoken);
+# ebac-api (EBaC's answers in JSON, for the EBaC integration's
 # voice commands) and ebac-admin (adding and removing translations by
 # voice, if the app's options allow). index.version identifies the index
 # program's source, so that ebac-setup can tell when an update changes it.
@@ -35,7 +36,7 @@ RUN curl -fsSL "https://github.com/neilbrookins/ebac/archive/${EBAC_COMMIT}.tar.
         | tar -xz --strip-components=1 \
     && make EBAC_PACKAGE="Home Assistant app${BUILD_VERSION:+ $BUILD_VERSION}" \
     && mkdir -p /out/AV \
-    && cp bible ebac-api ebac-admin index add-translation.sh add-gutenberg.sh trans groups groups.* /out/ \
+    && cp bible ebac-api ebac-admin index add-translation.sh add-gutenberg.sh trans groups groups.* spoken /out/ \
     && cat index.c both.h utf8.c utf8.h | sha256sum | cut -c1-64 > /out/index.version \
     && cp AV/* /out/AV/
 
