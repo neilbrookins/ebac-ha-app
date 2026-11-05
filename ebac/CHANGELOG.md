@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.12.2
+
+- **Notes marked in the Douay-Rheims.** Each of Challoner's notes has
+  **---** in the margin on its first line, where a verse's number goes,
+  so someone reading aloud sees where the verse ends and the note
+  begins. Voice (Assist) now reads only the verse, not its notes. A
+  Douay-Rheims added before: press **A**, **P**, **1581** again (it
+  replaces the copy you have, though Gutenberg's version is the same).
+
 ## 2.12.1
 
 - Docs: **Removing EBaC**. Uninstalling the app deletes the
