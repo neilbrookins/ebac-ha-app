@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.12.11
+
+- **Assist shows יהוה as the text has it again**, while you still hear
+  "Adonai": the change is now made only in what is heard, by the EBaC
+  integration's "EBaC voice" (integration 0.7.0 or later; choose it in a
+  voice assistant). Without it, the name is spoken as the voice reads it.
+
 ## 2.12.10
 
 - **Voice says יהוה as "Adonai"**, the word traditionally read in its
