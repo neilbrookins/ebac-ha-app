@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.12.12
+
+- **The Hebrew name in the Westminster Leningrad Codex is said as tradition
+  reads it**, through the EBaC integration's "EBaC voice" (0.7.2 or
+  later): אֲדֹנָי (Adonai), or אֱלֹהִים (Elohim) where it has Elohim's
+  vowels, with any letter joined to its front kept.
+
 ## 2.12.11
 
 - **Assist shows יהוה as the text has it again**, while you still hear
