@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.12.9
+
+- **Fixed: pasting on a phone put the text in twice** ("jesusjesus"), so
+  a word copied from a verse and pasted into a search found nothing.
+  Pasting with Ctrl+V on a computer wasn't affected.
+
 ## 2.12.8
 
 - **Fixed: the mouse wheel did nothing** since 2.12.6. It moves back or
