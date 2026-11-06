@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.12.6
+
+- **Fixed: the page could freeze while its size changed quickly**
+  (dragging a browser window's edge about, and possibly turning a phone
+  or the keyboard coming and going): the screen stopped redrawing, lines
+  wrapped, and keys did nothing until the page was reloaded. The page's
+  terminal now keeps one line it has scrolled past, not none, which
+  avoids a fault in it that this set off.
+
 ## 2.12.5
 
 - Nothing new to see: the app now builds its web page, its gestures and
