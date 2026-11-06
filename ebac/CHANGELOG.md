@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.12.10
+
+- **Voice says יהוה as "Adonai"**, the word traditionally read in its
+  place. Written with no vowels, the name was read wrongly (a Hebrew
+  voice said "yo"). The screen and searching keep the text as it is.
+
 ## 2.12.9
 
 - **Fixed: pasting on a phone put the text in twice** ("jesusjesus"), so
