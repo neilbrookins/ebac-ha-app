@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.12.8
+
+- **Fixed: the mouse wheel did nothing** since 2.12.6. It moves back or
+  on by verses again, as before (about six a notch).
+
 ## 2.12.7
 
 - **A mouse click goes on from "Press any key"**, as a tap does (the
