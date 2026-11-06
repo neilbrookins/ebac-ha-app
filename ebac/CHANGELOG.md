@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.12.7
+
+- **A mouse click goes on from "Press any key"**, as a tap does (the
+  Information screen's pages, for one). Before, only a key or a tap did,
+  and clicks there were mostly ignored. A click that ends selecting text
+  to copy still leaves the screen as it is.
+
 ## 2.12.6
 
 - **Fixed: the page could freeze while its size changed quickly**
