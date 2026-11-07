@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.12.13
+
+- **The list of translations says "(page 1 of 2)"** when it takes more
+  than one page, as the lists for adding translations do: with a phone's
+  keyboard up, the first page looked like the whole list. Paging (n/p) is
+  only offered when there is more than one page.
+
 ## 2.12.12
 
 - **The Hebrew name in the Westminster Leningrad Codex is said as tradition
