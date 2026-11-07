@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.12.14
+
+- **Hebrew verses have their reference on the right, in Hebrew letters**,
+  as Hebrew Bibles show them: the text right aligned, then chapter and
+  verse at the screen's edge, chapter first (Genesis 1:13 is א:יג; 15
+  and 16 are טו and טז). Lists of search results keep the reference on
+  the left, in Hebrew letters. English verses are unchanged.
+- The list of translations uses its short heading in a narrow window
+  however few translations there are (the long one wrapped on a phone).
+
 ## 2.12.13
 
 - **The list of translations says "(page 1 of 2)"** when it takes more
