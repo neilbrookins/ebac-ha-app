@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.13.2
+
+- Adding several translations at once: one blank line between them, not two.
+
 ## 2.13.1
 
 - **What you type in the lists for adding translations stays on the
