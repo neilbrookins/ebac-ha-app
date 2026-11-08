@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.12.15
+
+- **Long swipes on a Hebrew search line go the way they point**: a long
+  swipe left goes to the line's left end, right to its right end (they
+  went to the start and end, which in Hebrew are the other way round).
+- On a Hebrew search line, the cursor at the start sits on the first
+  letter, as on an English line, and moves one letter at a time.
+
 ## 2.12.14
 
 - **Hebrew verses have their reference on the right, in Hebrew letters**,
