@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.13.1
+
+- **What you type in the lists for adding translations stays on the
+  screen** when the list is drawn again, as when the phone's keyboard is
+  hidden: before, it vanished from the screen but was still sent with
+  Enter.
+- After adding or removing more than one translation, each result starts
+  at the left margin (the second had a stray indent).
+
 ## 2.13.0
 
 - **A third place to add translations from: thiagobodruk/bible on GitHub**
