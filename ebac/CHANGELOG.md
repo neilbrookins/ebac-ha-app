@@ -1,5 +1,18 @@
 # Changelog
 
+## 2.13.0
+
+- **A third place to add translations from: thiagobodruk/bible on GitHub**
+  (A, then T): some 140 Bibles in 85 languages, among them the New
+  International Version and the New Living Translation. Their short names
+  end in -TB (NIV-TB, NLT-TB, KJVA-TB), so the same Bible from each place
+  can be kept side by side. Some, such as the NIV and the NLT, are still
+  under copyright: EBaC says so and asks whether you agree, as for every
+  translation.
+- The Add screen's letters now name each place: **T** (or 1)
+  thiagobodruk/bible, **S** (or 2) scrollmapper's bible_databases (was
+  G), **P** (or 3) Project Gutenberg.
+
 ## 2.12.15
 
 - **Long swipes on a Hebrew search line go the way they point**: a long
