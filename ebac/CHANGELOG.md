@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.14.0
+
+- **Adding translations by voice from any of the three places**:
+  thiagobodruk/bible, scrollmapper's bible_databases, or Project Gutenberg
+  (its texts EBaC knows, by ebook number). Which one is the EBaC
+  integration's new Source setting (integration 0.8.0 or later). Removing
+  by voice uses whichever place the translation came from.
+
 ## 2.13.2
 
 - Adding several translations at once: one blank line between them, not two.
