@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.15.0
+
+- **A book can be typed by its short name** in translations from
+  thiagobodruk/bible (-TB), wherever a book name is typed (V, @ in a
+  search, a reference): `gn` Genesis, `jo` John, `ez` Ezekiel, `1sm`
+  1 Samuel. They are the collection's own (from the Portuguese names: `sl`
+  Psalms, `ap` Revelation), the same in almost every translation there, in
+  Latin letters even where the names are in Japanese or Korean. A -TB
+  translation added before this gets them when added again.
+
 ## 2.14.0
 
 - **Adding translations by voice from any of the three places**:
