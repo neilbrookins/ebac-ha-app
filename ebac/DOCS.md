@@ -9,7 +9,7 @@ Click inside the terminal window so it has the keyboard, then press a letter at 
 - **V** to view a passage: type the start of a book name, then the chapter and verse. Where a translation writes a book's number in Roman numerals (IThessalonians, IIIJohn), you can type the number instead: `2th` finds IIThessalonians, as it finds 2Thessalonians in the King James Version; this works in `@` searches too. For the numbers you can type the letters under the digits instead, **q w e r t y u i o p** for **1 2 3 4 5 6 7 8 9 0**, and **m** for a minus sign, so a phone's keyboard can stay on letters. Chapter and verse count from the start of the book, so **0** or a negative number counts back: John 3:0 is John 2:25, and Exodus chapter 0 is Genesis 50. Enter alone means 1.
 - **S** to search for words.
 - **C** to change translation: its number chooses it for now; **d** and its number (such as **d** then **3**) chooses it and makes it the default, the one EBaC starts with from then on, for every Home Assistant user.
-- **A** to add or remove a translation. It asks where from: **T** (or **1**) for thiagobodruk/bible on GitHub, **S** (or **2**) for scrollmapper's bible_databases on GitHub (both: see [Adding translations](#adding-translations)), or **P** (or **3**) for a text from Project Gutenberg, such as the Book of Mormon (see [Texts from Project Gutenberg](#texts-from-project-gutenberg)); **X** goes back. Tap a line to choose it.
+- **A** to add or remove a translation, from one of three places: **T** (or **1**) for [thiagobodruk/bible](#from-thiagobodrukbible-t) on GitHub, **S** (or **2**) for [scrollmapper's bible_databases](#from-scrollmappers-bible_databases-s) on GitHub, or **P** (or **3**) for [Project Gutenberg](#from-project-gutenberg-p), such as the Book of Mormon (see [Adding translations](#adding-translations)); **X** goes back. Tap a line to choose it.
 - **I** for information about EBaC.
 - **E** to exit.
 
@@ -84,21 +84,86 @@ Turning the phone in the Companion app takes the keyboard away from the page alt
 
 ## Adding translations
 
-The app comes with the King James Version. To add others, or remove them, press **A** at the main menu, then **T** or **S**: two collections on GitHub. **T** is [thiagobodruk/bible](https://github.com/thiagobodruk/bible), some 140 Bibles in 85 languages, among them the NIV and the NLT, whose short names end in `-TB` (`NIV-TB`), so that the same Bible from both places can be kept side by side; **S** is scrollmapper's bible_databases. (Some translations from thiagobodruk/bible, such as the NIV and the NLT, are still under copyright: what you may do with them is for their owners to say. EBaC asks whether you agree, as for every translation.) For either, EBaC first lists the languages there are translations in, each by its own name and its name in English, with how many translations it has: `1) English (34)`, then, in order of their English names, such as `Español, Spanish (4)` or `Deutsch, German (12)`. A `*` marks a language you have added translations in. Type a language's number and press Enter (**n** and **p**, then Enter, turn the page; Enter alone goes back to EBaC).
+The app comes with the King James Version. To add others, press **A** at the main menu. EBaC then asks **where to add from: one of three places**, each with its own collection and its own steps. Choose one (type its letter or number, or tap its line):
 
-EBaC then lists that language's translations. The English ones include the American Standard Version, the Berean Standard Bible, the Lexham English Bible, Young's Literal Translation, Darby, Webster, the Geneva Bible, Tyndale, and three with the Apocrypha (the King James Version with the Apocrypha, the Douay-Rheims Bible and the Catholic Public Domain Version). Type the numbers of the ones you want, such as `6` or `6 14`, and press Enter (Enter alone goes back to the languages). Those already added are marked with a `*`. For each one, EBaC first shows its license (most are public domain; some are free only for non-commercial use) and the address of its page at CrossWire, and asks whether you agree to it: **y** adds it, **n** skips it. It asks every time, even for a fresh copy, since a license can change. Each one agreed to is downloaded and indexed in a few seconds; when it's done, press any key (or tap) and you are back at the main menu with the new translation chosen; EBaC starts with it from then on, and **C** switches between them (**d** and a number there makes another the one to start with). Choosing one you've already added downloads a fresh copy and makes it the one EBaC starts with, but only if its text has changed since you downloaded it; if not, EBaC says you already have that version and changes nothing. To download the same version again, remove it first (**r** and its number), then add it.
+1. **T** (or **1**): [**thiagobodruk/bible**](#from-thiagobodrukbible-t), on GitHub. Some 140 Bibles in 85 languages, among them the NIV and the NLT. Their short names end in `-TB`.
+2. **S** (or **2**): [**scrollmapper's bible_databases**](#from-scrollmappers-bible_databases-s), on GitHub. 140 translations in 56 languages, such as the American Standard Version, the Berean Standard Bible and the Douay-Rheims.
+3. **P** (or **3**): [**Project Gutenberg**](#from-project-gutenberg-p). Particular texts, by ebook number: the Book of Mormon, the World English Bible, the Qur'an in three translations, and others. Their short names end in `-PG`.
 
-The languages and translations are read from where EBaC downloads them each time, so new ones appear on their own (140 translations in 56 languages at the moment, including Hebrew and Greek texts). The names of the languages come from Unicode's language database; the first time you press **A**, and once a month after, EBaC fetches them, which takes a few seconds. Some languages, such as Chinese, Japanese and Thai, are often written without spaces between words; EBaC searches word by word, so it notes that searching such a translation works poorly. Hebrew, Arabic and other right-to-left text is shown right to left, each line that is mostly right to left aligned on the right. With such a translation chosen, the search line is right to left too, and text you highlight on the screen is copied in reading order, so you can paste it into a search.
+**X** goes back to the main menu.
 
-To remove one, type **r** and its number, such as `r6`. Adding and removing can be mixed, done in the order typed: `r10 11 13` removes 10 and adds 11 and 13. If anything in the line is wrong, nothing is done and the list says what was wrong. The King James Version that comes with the app can't be removed.
+A translation is removed from the same place it was added from. What works the same way in all three (licenses, removing, where added translations are kept, and which one EBaC starts with) is under [For all three places](#for-all-three-places). To download, Home Assistant needs to be connected to the Internet.
 
-Added translations are kept in this app's own storage, so they are kept when the app is updated, and they are included in Home Assistant's backups (about 6 MB for each whole Bible, 2 MB for a New Testament). They are available to every Home Assistant user. To download, Home Assistant needs to be connected to the Internet.
+### From thiagobodruk/bible (T)
 
-## Texts from Project Gutenberg
+[thiagobodruk/bible](https://github.com/thiagobodruk/bible) has some 140 Bibles in 85 languages, among them the NIV and the NLT. Their short names end in `-TB` (`NIV-TB`), so that the same Bible from both places on GitHub can be kept side by side. Some, such as the NIV and the NLT, are still under copyright: what you may do with them is for their owners to say. EBaC asks whether you agree, as for every translation.
 
-Some texts, such as the Book of Mormon, aren't among those **A** offers, but are on [Project Gutenberg](https://www.gutenberg.org). Find the text there with its search, check it is the one you want, and note its ebook number (the **EBook-No.** on its page: 17 for the Book of Mormon). Then press **A** at EBaC's main menu, then **P**, type the number, and press Enter. EBaC first reads the ebook's page on Gutenberg and shows its title, when it was last updated and its license, and asks whether you agree (**y**); only then does it download the text and add it, as **A** does, so nothing is downloaded that you don't want. If you already have the same version, it says so without downloading anything. To remove one, press **A**, **P**, then **r** and its number. A text from Project Gutenberg has **-PG** at the end of its short name, so the same Bible from both places, such as the Douay-Rheims (**DRC** from GitHub, **DRC-PG** from Project Gutenberg), can be kept side by side; a text added before without it is renamed the next time you press **A**, **P**.
+To add one:
+
+1. At the main menu, press **A**, then **T**.
+2. EBaC lists the languages there are translations in, each by its own name and its name in English, with how many translations it has. A `*` marks a language you have added translations in. Type a language's number and press Enter (**n** and **p**, then Enter, turn the page; Enter alone goes back to EBaC).
+3. EBaC lists that language's translations. Those already added are marked with a `*`. Type the numbers of the ones you want, such as `6` or `6 14`, and press Enter (Enter alone goes back to the languages).
+4. For each one, EBaC shows its license and asks whether you agree to it: **y** adds it, **n** skips it.
+5. Each one agreed to is downloaded and indexed in a few seconds. When it's done, press any key (or tap): you are back at the main menu, reading from the new translation.
+
+To remove one: **A**, **T**, then **r** and its number (see [Removing a translation](#removing-a-translation)).
+
+### From scrollmapper's bible_databases (S)
+
+scrollmapper's bible_databases has 140 translations in 56 languages, made from CrossWire's, including Hebrew and Greek texts. The English ones include the American Standard Version, the Berean Standard Bible, the Lexham English Bible, Young's Literal Translation, Darby, Webster, the Geneva Bible, Tyndale, and three with the Apocrypha (the King James Version with the Apocrypha, the Douay-Rheims Bible and the Catholic Public Domain Version).
+
+To add one:
+
+1. At the main menu, press **A**, then **S**.
+2. EBaC lists the languages there are translations in, each by its own name and its name in English, with how many translations it has: `1) English (34)`, then, in order of their English names, such as `Español, Spanish (4)` or `Deutsch, German (12)`. A `*` marks a language you have added translations in. Type a language's number and press Enter (**n** and **p**, then Enter, turn the page; Enter alone goes back to EBaC).
+3. EBaC lists that language's translations. Those already added are marked with a `*`. Type the numbers of the ones you want, such as `6` or `6 14`, and press Enter (Enter alone goes back to the languages).
+4. For each one, EBaC shows its license (most are public domain; some are free only for non-commercial use) and the address of its page at CrossWire, and asks whether you agree to it: **y** adds it, **n** skips it.
+5. Each one agreed to is downloaded and indexed in a few seconds. When it's done, press any key (or tap): you are back at the main menu, reading from the new translation.
+
+To remove one: **A**, **S**, then **r** and its number (see [Removing a translation](#removing-a-translation)).
+
+### From Project Gutenberg (P)
+
+Some texts, such as the Book of Mormon, aren't in either collection on GitHub, but are on [Project Gutenberg](https://www.gutenberg.org). EBaC knows particular ones (below) by their ebook numbers. To add one:
+
+1. Find the text on gutenberg.org with its search, and check it is the one you want.
+2. Note its ebook number: the **EBook-No.** on its page (17 for the Book of Mormon).
+3. At the main menu, press **A**, then **P**, type the number, and press Enter.
+4. EBaC first reads the ebook's page on Gutenberg and shows its title, when it was last updated and its license, and asks whether you agree (**y**). Only then does it download the text and add it, so nothing is downloaded that you don't want. If you already have the same version, it says so without downloading anything.
+
+To remove one: **A**, **P**, then **r** and its number. A text from Project Gutenberg has **-PG** at the end of its short name, so the same Bible from both places, such as the Douay-Rheims (**DRC** from GitHub, **DRC-PG** from Project Gutenberg), can be kept side by side; a text added before without it is renamed the next time you press **A**, **P**.
 
 EBaC is taught Gutenberg's texts one at a time, as their layouts differ; for now it knows the Book of Mormon (ebook 17, as **BOM-PG**), the World English Bible (ebook 8294, as **WEB-PG**, its notes in {braces} as printed, which voice doesn't read), the Qur'an in three translations (ebook 16955, added as three: **YUSUFALI-PG**, **PICKTHALL-PG** and **SHAKIR-PG**; open EBaC in three windows, one in each, to compare them side by side; references are as the Qur'an is cited, Qur'an 2:255) and the Douay-Rheims Bible (ebook 1581, as **DRC-PG**, with Challoner's notes under the verses they explain, and the edition's appendices). Each note's first line has **---** in the margin, where a verse's number goes, so when reading aloud you can see where the verse ends and the note begins; voice (Assist) reads only the verse, not its notes. If you added the Douay-Rheims before version 2.12.2, press **A**, **P** and type **1581** again to get the marks: it replaces the copy you have. Nothing in the text is left out, and it is laid out as Gutenberg has it: the front matter (title page, the testimonies with the witnesses' names, the contents) and each book's heading and summary come before its chapter 1, each line, name and blank line on its own row as in the original, and each paragraph wrapped to your screen, shown as plain text without numbers. Comma or a swipe down from 1:1 reaches them, and searches find them. A verse taller than the screen is shown a screenful at a time: swipe up (or press space) for the rest; its last part has the verses after it below it. In search results, such a verse is shown cut to fit; choose it by its number to read all of it.
+
+### For all three places
+
+#### Licenses
+
+For each translation, EBaC shows its license and asks whether you agree to it. It asks every time, even for a fresh copy, since a license can change.
+
+#### Adding one you already have
+
+Choosing one you've already added downloads a fresh copy and makes it the one EBaC starts with, but only if its text has changed since you downloaded it; if not, EBaC says you already have that version and changes nothing. To download the same version again, remove it first (**r** and its number), then add it.
+
+#### Removing a translation
+
+On the list of translations, type **r** and its number, such as `r6`. Adding and removing can be mixed, done in the order typed: `r10 11 13` removes 10 and adds 11 and 13. If anything in the line is wrong, nothing is done and the list says what was wrong. Each place removes only its own translations: **T** those from thiagobodruk/bible, **S** those from scrollmapper's, **P** those from Project Gutenberg. The King James Version that comes with the app can't be removed.
+
+#### Which translation EBaC uses
+
+A translation just added is the one EBaC reads from, and starts with from then on. **C** switches between them (**d** and a number there makes another the one to start with).
+
+#### Where added translations are kept
+
+Added translations are kept in this app's own storage, so they are kept when the app is updated, and they are included in Home Assistant's backups (about 6 MB for each whole Bible, 2 MB for a New Testament). They are available to every Home Assistant user.
+
+#### The lists of languages and translations
+
+The languages and translations are read from where EBaC downloads them each time, so new ones appear on their own. The names of the languages come from Unicode's language database; the first time you press **A**, and once a month after, EBaC fetches them, which takes a few seconds. Some languages, such as Chinese, Japanese and Thai, are often written without spaces between words; EBaC searches word by word, so it notes that searching such a translation works poorly.
+
+#### Right-to-left text
+
+Hebrew, Arabic and other right-to-left text is shown right to left, each line that is mostly right to left aligned on the right. With such a translation chosen, the search line is right to left too, and text you highlight on the screen is copied in reading order, so you can paste it into a search.
 
 ## Exiting
 
