@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.15.2
+
+- **A book's whole name chooses it**, even where another book's name
+  begins with it: `esther` is Esther in the KJVA-TB, which also has a
+  longer name beginning "Esther" (`estherg` chooses that one). Before, it
+  matched both, and a space or Enter ends a name, so there was nothing
+  more to type. The same at the V prompt, after @ in a search, and in a
+  reference said to Assist ("Esther 1:1").
+- **A name that matches several books lists them**, one to a line, after
+  "There is more than one book that matches that name", so you can see
+  what more to type: `phil` lists Philippians and Philemon.
+
 ## 2.15.1
 
 - **Verses in Japanese and Chinese are shown whole.** EBaC read a verse a
