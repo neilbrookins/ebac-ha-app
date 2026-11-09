@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.15.4
+
+- **Removing the translation you are reading, then searching, no longer
+  stops EBaC.** With the main menu on the screen when it was removed (by
+  voice, say), S filled the search line with x's and EBaC stopped with
+  "Out of room in string!". Now it goes back to the main menu, which says
+  the translation was removed and carries on with another.
+- **A search line too long** is refused with a beep, key by key, instead
+  of EBaC stopping. The same where a book's name is typed.
+
 ## 2.15.3
 
 - **Translations added or removed by someone else are seen at once.**
