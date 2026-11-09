@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.15.1
+
+- **Verses in Japanese and Chinese are shown whole.** EBaC read a verse a
+  word at a time, keeping 80 bytes of a word, and these texts have no
+  spaces between words: a verse was cut after 26 characters, ending in
+  part of the 27th, shown as another character (Genesis 1:2 in JNIV-TB,
+  and two verses in three of that translation). The text added was always
+  whole, so nothing needs adding again.
+
 ## 2.15.0
 
 - **A book can be typed by its short name** in translations from
