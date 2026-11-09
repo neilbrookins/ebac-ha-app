@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.15.5
+
+- **C's line, on a short list, names both ways to choose**: a number
+  alone, and d first to start with it from now on ("Number: choose; d,
+  number: default (x: back)" on a phone). Before, it named only the second.
+
 ## 2.15.4
 
 - **Removing the translation you are reading, then searching, no longer
