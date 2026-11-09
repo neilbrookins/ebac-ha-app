@@ -9,7 +9,7 @@ Click inside the terminal window so it has the keyboard, then press a letter at 
 - **V** to view a passage: type the start of a book name, then the chapter and verse. Where a translation writes a book's number in Roman numerals (IThessalonians, IIIJohn), you can type the number instead: `2th` finds IIThessalonians, as it finds 2Thessalonians in the King James Version; this works in `@` searches too. For the numbers you can type the letters under the digits instead, **q w e r t y u i o p** for **1 2 3 4 5 6 7 8 9 0**, and **m** for a minus sign, so a phone's keyboard can stay on letters. Chapter and verse count from the start of the book, so **0** or a negative number counts back: John 3:0 is John 2:25, and Exodus chapter 0 is Genesis 50. Enter alone means 1.
 - **S** to search for words.
 - **C** to change translation: its number chooses it for now; **d** and its number (such as **d** then **3**) chooses it and makes it the default, the one EBaC starts with from then on, for every Home Assistant user.
-- **A** to add or remove a translation, from one of three places: **T** (or **1**) for [thiagobodruk/bible](#from-thiagobodrukbible-t) on GitHub, **S** (or **2**) for [scrollmapper's bible_databases](#from-scrollmappers-bible_databases-s) on GitHub, or **P** (or **3**) for [Project Gutenberg](#from-project-gutenberg-p), such as the Book of Mormon (see [Adding translations](#adding-translations)); **X** goes back. Tap a line to choose it.
+- **A** to add or remove a translation, from one of three places: **T** (or **1**) for [thiagobodruk/bible](#from-thiagobodrukbible-t) on GitHub, **S** (or **2**) for [scrollmapper/bible_databases](#from-scrollmapperbible_databases-s) on GitHub, or **P** (or **3**) for [Project Gutenberg](#from-project-gutenberg-p), such as the Book of Mormon (see [Adding translations](#adding-translations)); **X** goes back. Tap a line to choose it.
 - **I** for information about EBaC.
 - **E** to exit.
 
@@ -87,7 +87,7 @@ Turning the phone in the Companion app takes the keyboard away from the page alt
 The app comes with the King James Version. To add others, press **A** at the main menu. EBaC then asks **where to add from: one of three places**, each with its own collection and its own steps. Choose one (type its letter or number, or tap its line):
 
 1. **T** (or **1**): [**thiagobodruk/bible**](#from-thiagobodrukbible-t), on GitHub. Some 140 Bibles in 85 languages, among them the NIV and the NLT. Their short names end in `-TB`.
-2. **S** (or **2**): [**scrollmapper's bible_databases**](#from-scrollmappers-bible_databases-s), on GitHub. 140 translations in 56 languages, such as the American Standard Version, the Berean Standard Bible and the Douay-Rheims.
+2. **S** (or **2**): [**scrollmapper/bible_databases**](#from-scrollmapperbible_databases-s), on GitHub. 140 translations in 56 languages, such as the American Standard Version, the Berean Standard Bible and the Douay-Rheims.
 3. **P** (or **3**): [**Project Gutenberg**](#from-project-gutenberg-p). Particular texts, by ebook number: the Book of Mormon, the World English Bible, the Qur'an in three translations, and others. Their short names end in `-PG`.
 
 **X** goes back to the main menu.
@@ -108,9 +108,9 @@ To add one:
 
 To remove one: **A**, **T**, then **r** and its number (see [Removing a translation](#removing-a-translation)).
 
-### From scrollmapper's bible_databases (S)
+### From scrollmapper/bible_databases (S)
 
-scrollmapper's bible_databases has 140 translations in 56 languages, made from CrossWire's, including Hebrew and Greek texts. The English ones include the American Standard Version, the Berean Standard Bible, the Lexham English Bible, Young's Literal Translation, Darby, Webster, the Geneva Bible, Tyndale, and three with the Apocrypha (the King James Version with the Apocrypha, the Douay-Rheims Bible and the Catholic Public Domain Version).
+[scrollmapper/bible_databases](https://github.com/scrollmapper/bible_databases) has 140 translations in 56 languages, made from CrossWire's, including Hebrew and Greek texts. The English ones include the American Standard Version, the Berean Standard Bible, the Lexham English Bible, Young's Literal Translation, Darby, Webster, the Geneva Bible, Tyndale, and three with the Apocrypha (the King James Version with the Apocrypha, the Douay-Rheims Bible and the Catholic Public Domain Version).
 
 To add one:
 
@@ -147,7 +147,7 @@ Choosing one you've already added downloads a fresh copy and makes it the one EB
 
 #### Removing a translation
 
-On the list of translations, type **r** and its number, such as `r6`. Adding and removing can be mixed, done in the order typed: `r10 11 13` removes 10 and adds 11 and 13. If anything in the line is wrong, nothing is done and the list says what was wrong. Each place removes only its own translations: **T** those from thiagobodruk/bible, **S** those from scrollmapper's, **P** those from Project Gutenberg. The King James Version that comes with the app can't be removed.
+On the list of translations, type **r** and its number, such as `r6`. Adding and removing can be mixed, done in the order typed: `r10 11 13` removes 10 and adds 11 and 13. If anything in the line is wrong, nothing is done and the list says what was wrong. Each place removes only its own translations: **T** those from thiagobodruk/bible, **S** those from scrollmapper/bible_databases, **P** those from Project Gutenberg. The King James Version that comes with the app can't be removed.
 
 #### Which translation EBaC uses
 
