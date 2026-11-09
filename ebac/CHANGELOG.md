@@ -1,5 +1,21 @@
 # Changelog
 
+## 2.15.3
+
+- **Translations added or removed by someone else are seen at once.**
+  Another user, or voice through the EBaC integration, may add or remove a
+  translation while you read. **C** now reads the list again each time,
+  so it always shows them as they are: one just added is there, one just
+  removed isn't, with no need to leave EBaC and start it again.
+- **Removing the translation you are reading no longer stops EBaC.**
+  Before, EBaC stopped with "Can't Open ... for reading" the next time it
+  opened a book. Now it says "The translation ... has been removed, by
+  another EBaC or by voice", and carries on with the first translation
+  still listed.
+- The list of translations is never read half written while it is being
+  changed.
+- **A** names the second place as GitHub does: **scrollmapper/bible_databases**.
+
 ## 2.15.2
 
 - **A book's whole name chooses it**, even where another book's name
