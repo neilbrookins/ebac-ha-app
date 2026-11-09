@@ -149,6 +149,8 @@ Choosing one you've already added downloads a fresh copy and makes it the one EB
 
 On the list of translations, type **r** and its number, such as `r6`. Adding and removing can be mixed, done in the order typed: `r10 11 13` removes 10 and adds 11 and 13. If anything in the line is wrong, nothing is done and the list says what was wrong. Each place removes only its own translations: **T** those from thiagobodruk/bible, **S** those from scrollmapper/bible_databases, **P** those from Project Gutenberg. The King James Version that comes with the app can't be removed.
 
+Translations are added and removed for everyone using the app: another user, or voice (the EBaC integration), may add or remove one while you are reading. EBaC reads the list again each time you press **C**, so it always shows them as they are now. If the translation you are reading is removed, EBaC says so and carries on with the first translation still listed.
+
 #### Which translation EBaC uses
 
 A translation just added is the one EBaC reads from, and starts with from then on. **C** switches between them (**d** and a number there makes another the one to start with).
