@@ -1,5 +1,19 @@
 # Changelog
 
+## 2.16.0
+
+- **Translations from scrollmapper/bible_databases end in `-SM`**, as
+  those from thiagobodruk/bible end in `-TB` and those from Project
+  Gutenberg in `-PG`. Every translation you add now says where it came
+  from: the part before the dash is the translation's own short name
+  (`KJVA` in `KJVA-SM`), and the two letters say which of A's three to
+  go back to, to remove or update it. EBaC's own (`AV`) has none.
+- Ones you added before keep their old names (such as `WLC`). **A**,
+  **S** lists each under that name with "(old name)", where **r**
+  removes it; then add it again as `WLC-SM`.
+- Short names may now be up to 31 characters (19 before), so the
+  longest, `FreOltramare1874-SM`, fits.
+
 ## 2.15.7
 
 - **A chapter's heading has `===` in the margin**, where a verse's
