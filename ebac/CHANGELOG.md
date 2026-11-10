@@ -1,5 +1,21 @@
 # Changelog
 
+## 2.16.1
+
+- **A dash between two words separates them in searches.** In
+  "yourself—no prophet" (New Living Translation, John 7:52) neither
+  "yourself" nor "no" was found, as the index took them as one word. Now
+  an em dash, en dash, or two hyphens (`--`) end a word, as a space does
+  (one hyphen still joins: "father-in-law"). The app indexes your added
+  translations again when it starts, so this needs nothing from you
+  (it takes a little while, once).
+- **A row of hyphens in a verse starts a note on a line of its own.** The
+  New Living Translation from thiagobodruk/bible has one after John
+  7:52, John 8:11 and Mark 16:8, with a note after the first and last.
+  It read as part of the verse; now it is a line with `---` in the
+  margin, as other notes are, as a printed Bible shows it. A translation
+  added before keeps the row in its verse until removed and added again.
+
 ## 2.16.0
 
 - **Translations from scrollmapper/bible_databases end in `-SM`**, as
