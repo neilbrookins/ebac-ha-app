@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.15.7
+
+- **A chapter's heading has `===` in the margin**, where a verse's
+  number goes, as a note has `---`: "The history of Cain and Abel." in
+  the Douay-Rheims no longer reads as the end of the verse above it.
+
 ## 2.15.6
 
 - **Translations keep the source's own characters.** Adding a
