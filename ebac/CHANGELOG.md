@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.15.6
+
+- **Translations keep the source's own characters.** Adding a
+  translation no longer turns curly quotes, dashes, the ellipsis or the
+  pilcrow into plain ones: the text is as the source has it. A search
+  typed with a plain apostrophe still finds every kind (`don't` finds
+  `don’t`), and found words are highlighted however they are written.
+  Translations added before keep their plain punctuation until removed
+  and added again.
+
 ## 2.15.5
 
 - **C's line, on a short list, names both ways to choose**: a number
