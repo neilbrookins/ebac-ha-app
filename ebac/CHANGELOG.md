@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.17.1
+
+- **Paragraphs marked at a verse's end or within it.** Besides a ¶ at
+  the start of a verse (2.17.0), a translation may put it at the end of
+  the verse before a paragraph (the American King James Version,
+  `AKJV-SM`): a blank line now follows that verse. Or within a verse,
+  where a paragraph starts partway (an epistle's closing line in the
+  King James Version, Pure Cambridge Edition): the rest of the verse
+  starts on a new line, after a blank one. Each is counted in what fits
+  on a screen. The ¶ is shown where the text has it; voice doesn't say
+  it (with the integration 0.8.8).
+
 ## 2.17.0
 
 - **Paragraphs, as on the printed page.** Some translations mark where a
