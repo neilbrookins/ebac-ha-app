@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.16.2
+
+- **A row of hyphens in a verse is kept**, as the publisher placed it, on
+  a line of its own with `---` in the margin; the note after it (John
+  7:52 in the New Living Translation) is on the next line, also marked
+  `---`. In 2.16.1 the row was dropped, the `---` alone standing for it.
+  Voice still leaves both out. Remove and add a translation again for
+  this.
+
 ## 2.16.1
 
 - **A dash between two words separates them in searches.** In
