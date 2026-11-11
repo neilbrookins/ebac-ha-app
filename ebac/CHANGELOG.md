@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.16.3
+
+- **EBaC uses the whole width of the window from the start.** A resize
+  just as EBaC started (the web page fitting itself as it connects)
+  could be missed, so every page was laid out narrower than the window,
+  until the window was resized again. EBaC now asks the window's size
+  each time it lays out a page.
+
 ## 2.16.2
 
 - **A row of hyphens in a verse is kept**, as the publisher placed it, on
