@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.17.0
+
+- **Paragraphs, as on the printed page.** Some translations mark where a
+  paragraph begins with a pilcrow, ¶, at the start of the verse (the
+  King James Version, Pure Cambridge Edition, `KJVPCE-SM`, has nearly
+  3,000). Reading a passage, such a verse now has a blank line before
+  it. The blank line is counted in what fits on a screen, so a verse
+  that would no longer fit goes to the next one. There is none at the
+  top of a screen, below a book's heading, or in a list of verses
+  found.
+
 ## 2.16.5
 
 - **The importer for scrollmapper/bible_databases is now
