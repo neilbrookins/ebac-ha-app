@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.16.5
+
+- **The importer for scrollmapper/bible_databases is now
+  `add-scrollmapper.sh`** (it was `add-translation.sh`), so each of the
+  three is named for its source, beside `add-thiagobodruk.sh` and
+  `add-gutenberg.sh`. Nothing changes in how translations are added or
+  removed; the old name's link in EBaC's folder is removed.
+
 ## 2.16.4
 
 - **The page now really uses the whole width of the window from the
