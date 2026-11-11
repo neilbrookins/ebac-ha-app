@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.16.4
+
+- **The page now really uses the whole width of the window from the
+  start.** The web terminal sized itself once, then switched to a faster
+  way of drawing whose characters measure narrower, and never sized
+  itself again: it kept about a tenth fewer columns than the window
+  holds, until the window was resized. The page now has it size itself
+  again once the first screen is drawn. (2.16.3's change was right, but
+  not this.)
+
 ## 2.16.3
 
 - **EBaC uses the whole width of the window from the start.** A resize
