@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.18.0
+
+- **Chapters stand apart.** Reading a passage, each chapter's first
+  verse now has a blank line before it, as a paragraph's does (2.17.0):
+  its verse 1, or, where a chapter has a summary before verse 1 (the
+  Douay-Rheims, `DRC-PG`, marked `===`), before that summary. Not in a
+  book's first chapter, below its heading; not at the top of a screen,
+  or in a list of verses found. A verse 1 that also starts a paragraph
+  (with ¶) gets one blank line, not two. It is counted in what fits on
+  a screen.
+
 ## 2.17.1
 
 - **Paragraphs marked at a verse's end or within it.** Besides a ¶ at
