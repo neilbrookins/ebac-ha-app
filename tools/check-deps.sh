@@ -7,7 +7,7 @@
 # Home Assistant offers an update only when the app's version number (in
 # ebac/config.yaml) changes. EBaC itself, and Home Assistant's base image,
 # are pinned in ebac/Dockerfile, so they only change with a new version.
-# But the Alpine packages the Dockerfile adds (ttyd, ncurses, and the
+# But the Alpine packages the Dockerfile adds (ttyd and the
 # libraries ttyd uses) are simply the newest at build time: when Alpine
 # fixes one, an installed app keeps the old one, and nothing says so.
 #

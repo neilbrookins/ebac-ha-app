@@ -11,4 +11,3 @@ json-c           main/json-c              0.18-r1
 libuv            main/libuv               1.52.1-r0
 zlib             main/zlib                1.3.2-r1
 openssl          main/openssl             3.5.9-r0
-ncurses          main/ncurses             6.6_p20260516-r0

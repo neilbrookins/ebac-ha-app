@@ -22,12 +22,14 @@ FROM ${BUILD_FROM} AS build
 # BUILD_VERSION is this app's version, which Home Assistant passes to the
 # build; EBaC's Information screen shows it ("Home Assistant app 2.1.13").
 ARG BUILD_VERSION
-ARG EBAC_COMMIT=6eb99df55f32a50800448a85dfbb6a0bfd0eeee7
+ARG EBAC_COMMIT=d2246d7759df38e1eaadff61e7a64fd0b59f5563
 
-RUN apk add --no-cache build-base ncurses-dev tar
+RUN apk add --no-cache build-base tar
 
-# "make" builds the program and also each translation's concordance
-# index (the .dat files in AV), which isn't stored in the EBaC repository.
+# The program is bible-xterm: EBaC built for a terminal known to be xterm,
+# as ttyd's is, so it needs no ncurses (curses.c's XTERM_BUILTIN). "make
+# indexes" builds each translation's concordance index (the .dat files in
+# AV), which isn't stored in the EBaC repository.
 # Kept too: the index program; the translation importers, for A)dd a
 # translation (add-thiagobodruk.sh, add-scrollmapper.sh and add-gutenberg.sh,
 # for T)hiagobodruk/bible, S)crollmapper and P)roject Gutenberg, and
@@ -42,8 +44,9 @@ WORKDIR /src
 RUN curl -fsSL "https://github.com/neilbrookins/ebac/archive/${EBAC_COMMIT}.tar.gz" \
         | tar -xz --strip-components=1 \
     && make EBAC_PACKAGE="Home Assistant app${BUILD_VERSION:+ $BUILD_VERSION}" \
+            bible-xterm ebac-api index indexes \
     && mkdir -p /out/AV \
-    && cp bible ebac-api ebac-admin index importer.sh add-thiagobodruk.sh add-scrollmapper.sh add-gutenberg.sh trans groups groups.* spoken said /out/ \
+    && cp bible-xterm ebac-api ebac-admin index importer.sh add-thiagobodruk.sh add-scrollmapper.sh add-gutenberg.sh trans groups groups.* spoken said /out/ \
     && cat index.c both.h utf8.c utf8.h | sha256sum | cut -c1-64 > /out/index.version \
     && cp AV/* /out/AV/ \
     && mkdir -p /out/docker \
@@ -54,12 +57,12 @@ RUN curl -fsSL "https://github.com/neilbrookins/ebac/archive/${EBAC_COMMIT}.tar.
 FROM ${BUILD_FROM}
 
 # ttyd is the web terminal used by Home Assistant's own Terminal app.
-# ncurses-terminfo-base describes ttyd's terminal (xterm-256color).
+# (No ncurses: bible-xterm has xterm's capabilities built in.)
 # The translation importer needs only BusyBox (its sh and awk) and curl
 # with ca-certificates, to download (the base image has those already).
 # busybox-extras has BusyBox's web server, httpd, which runs ebac-api for
 # the EBaC integration (see /etc/services.d/ebac-api).
-RUN apk add --no-cache ttyd ncurses-libs ncurses-terminfo-base curl ca-certificates \
+RUN apk add --no-cache ttyd curl ca-certificates \
         busybox-extras
 
 # EBaC's files: the program, the 'trans' list, the King James text, the

@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.18.1
+
+- **EBaC no longer needs ncurses.** ttyd's web terminal is always xterm,
+  so the app now runs bible-xterm, EBaC built with xterm's few terminal
+  codes written in (as EBaC in a web browser is), and ncurses is no
+  longer installed. Every screen is the same as before but one line of
+  the Information screen, "Terminal library: xterm, built in".
+- **A resize is noticed at once in every wait for a key**, as EBaC in a
+  web browser needed (a phone's keyboard coming or going there); here it
+  was already, so nothing seen changes.
+
 ## 2.18.0
 
 - **Chapters stand apart.** Reading a passage, each chapter's first
