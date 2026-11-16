@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.18.2
+
+- **The search screen fits a phone.** Its help was laid out for 80
+  columns: on a phone its lines wrapped, and with the keyboard up it was
+  taller than the screen, so its first lines scrolled away as you typed.
+  Now it is in one column on a narrow screen (two, as before, where they
+  fit), and shows only what fits above the line you type on.
+- **A blank search isn't kept in the search history.** Enter on an empty
+  search line goes back to the main menu; it was also kept as the newest
+  search, so Up showed nothing, and the search before it was one more Up
+  away.
+
 ## 2.18.1
 
 - **EBaC no longer needs ncurses.** ttyd's web terminal is always xterm,
