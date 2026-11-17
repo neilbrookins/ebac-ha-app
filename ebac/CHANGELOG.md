@@ -1,5 +1,24 @@
 # Changelog
 
+## 2.19.0
+
+- **Adding a translation is EBaC's own now.** A on the main menu (T, S
+  or P) no longer starts a shell script: the importer is part of EBaC
+  itself, written in C, the same for every place EBaC runs, its web
+  page too. What you see and what it adds are the same as before,
+  checked byte for byte against the scripts for every translation each
+  place offers, and screen by screen. Voice (adding and removing
+  translations) uses it too. The scripts (add-thiagobodruk.sh,
+  add-scrollmapper.sh, add-gutenberg.sh, importer.sh) are gone, and
+  their links are removed from the app's folder.
+- **Adding shows each step as it starts**, and keys pressed while it
+  works no longer pass over "Press any key".
+- **After adding, EBaC reads the new translation.** It showed the new
+  one's name, but read the one shown before (View then stopped).
+- **Project Gutenberg**: an ebook number typed with a leading 0 (017) is
+  read as 17 (the script read it as 15); renaming a text added before
+  its name had -PG says its new name.
+
 ## 2.18.2
 
 - **The search screen fits a phone.** Its help was laid out for 80
