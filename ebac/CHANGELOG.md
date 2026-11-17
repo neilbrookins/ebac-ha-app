@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.19.2
+
+- **Project Gutenberg's texts from its mirror first.** P under A, and
+  voice, now download the text from Gutenberg's own mirror,
+  gutenberg.pglaf.org (the same file, byte for byte), and from
+  www.gutenberg.org only if the mirror can't be reached: Gutenberg says
+  its website is for people reading it, not programs. The ebook's page
+  (title, last update, copyright status) is still read from
+  www.gutenberg.org, the only place it is.
+
 ## 2.19.1
 
 - **Project Gutenberg's texts from its mirror while its site is down.**
