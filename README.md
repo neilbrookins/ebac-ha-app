@@ -1,7 +1,7 @@
 # EBaC app for Home Assistant
 
 > [!NOTE]
-> **You are looking at the EBaC app for Home Assistant** (an app, which Home Assistant used to call an add-on: a program that runs beside it, here with a page in its sidebar). [Home Assistant](https://www.home-assistant.io/) is a free smart-home system, often run on a small computer such as a Raspberry Pi and used through a web browser or its phone app. If you have it, this is the easiest way to get EBaC: there's nothing to type or build, it updates itself, and besides the keyboard it works by tapping, swiping and clicking, on a phone, a tablet or a computer's web browser.
+> **You are looking at the EBaC app for Home Assistant** (an app, which Home Assistant used to call an add-on: a program that runs beside it, here with a page in its sidebar). [Home Assistant](https://www.home-assistant.io/) is a free smart-home system, often run on a small computer such as a Raspberry Pi and used through a web browser or its phone app. If you have it, this is the easiest way to run EBaC on your own server, for your household: there's nothing to type or build, it updates itself, and besides the keyboard it works by tapping, swiping and clicking, on a phone, a tablet or a computer's web browser.
 >
 > **Just want to try EBaC?** Open **[neilbrookins.github.io/ebac](https://neilbrookins.github.io/ebac/)**: the same EBaC, in your web browser, with nothing to install.
 >
