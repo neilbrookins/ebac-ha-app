@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.19.1
+
+- **Project Gutenberg's texts from its mirror while its site is down.**
+  When www.gutenberg.org can't be reached (as since November 16), P
+  under A, and voice, download the text from Gutenberg's mirror,
+  gutenberg.pglaf.org: the same file, byte for byte, and EBaC says so.
+  (Its page can't be read meanwhile, so the license is read from the
+  text, as before when the page couldn't be read.)
+
 ## 2.19.0
 
 - **Adding a translation is EBaC's own now.** A on the main menu (T, S
