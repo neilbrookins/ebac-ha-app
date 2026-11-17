@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.20.1
+
+- **A spinner while a download waits.** Adding a translation (**A**),
+  a slow download no longer looks stuck: a \ | / - turns in one place
+  where the cursor is until it is done, then disappears.
+
 ## 2.20.0
 
 - **Larger or smaller text.** On the main menu, **F** makes the text a
