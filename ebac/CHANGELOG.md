@@ -2,7 +2,7 @@
 
 ## 2.20.1
 
-- **A spinner while a download waits.** Adding a translation (**A**),
+- **A spinner while a download waits.** When adding a translation (**A**),
   a slow download no longer looks stuck: a \ | / - turns in one place
   where the cursor is until it is done, then disappears.
 
