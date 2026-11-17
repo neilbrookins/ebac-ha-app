@@ -11,6 +11,7 @@ Click inside the terminal window so it has the keyboard, then press a letter at 
 - **C** to change translation: its number chooses it for now; **d** and its number (such as **d** then **3**) chooses it and makes it the default, the one EBaC starts with from then on, for every Home Assistant user.
 - **A** to add or remove a translation, from one of three places: **T** (or **1**) for [thiagobodruk/bible](#from-thiagobodrukbible-t) on GitHub, **S** (or **2**) for [scrollmapper/bible_databases](#from-scrollmapperbible_databases-s) on GitHub, or **P** (or **3**) for [Project Gutenberg](#from-project-gutenberg-p), such as the Book of Mormon (see [Adding translations](#adding-translations)); **X** goes back. Tap a line to choose it.
 - **I** for information about EBaC.
+- **F** to make the text larger, **f** smaller, by the smallest step (a pixel) each time. The window then holds fewer, or more, rows and columns, and the screen is redrawn to fit. Your browser keeps the size for next time.
 - **E** to exit.
 
 In any list or passage, press **?** to see the keys you can use there. If the window changes size, for example when a phone's on-screen keyboard appears or goes away, the passage or list is redrawn at once to fit.
@@ -71,6 +72,8 @@ On a phone or tablet, you only need the keyboard to type a search or a book, cha
 | "Press any key" | anywhere | anywhere |
 
 When the list of translations fits on the screen with a blank line between them, it is shown that way, as the main menu is, so each is easier to tap; otherwise one to a line. Swiping up moves on to what comes next, as when scrolling. Tapping **View**, **Search** or **Add or remove a translation** brings up the keyboard, since you type next; the other gestures don't. Tapping anywhere else brings up the keyboard, as before, so you can still use every key; while you are typing a line (a search, or a book, chapter or verse) and the keyboard is up, a tap is Enter instead. Enter with nothing typed goes back to the main menu, as the Enter key does. If you hide the keyboard to see more of the screen, swiping and tapping keep it hidden; while it's showing, they leave it showing.
+
+To make the text larger or smaller, pinch: spread two fingers apart for larger, bring them together for smaller, on any screen. The change is gentle on purpose: a moderate pinch is one step, and even a large one only a few, so a big change takes several pinches. With a mouse, turn the wheel on the main menu: up for larger, down for smaller, one step for each notch, however fast you turn it. (Elsewhere the wheel moves through the passage or list, as before.)
 
 Some phone keyboards, such as the Amazon keyboard on a Fire tablet, hold back what you type until a word is finished. EBaC takes each letter from them at once, so a single key at the main menu works without pressing space after it, and a book's name is completed as you type it.
 

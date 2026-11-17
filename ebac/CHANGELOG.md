@@ -1,5 +1,22 @@
 # Changelog
 
+## 2.20.0
+
+- **Larger or smaller text.** On the main menu, **F** makes the text a
+  pixel larger and **f** a pixel smaller. Pinch to do the same on any
+  screen (fingers apart: larger; together: smaller), or, with a mouse,
+  turn the wheel on the main menu (up: larger). Each is gentle on
+  purpose: a pinch or a notch of the wheel is a small step, so a big
+  change takes several. The screen refits to the new size, and your
+  browser keeps it for next time.
+- **The Information screens** list where translations come from
+  (thiagobodruk/bible, scrollmapper/bible_databases and Project
+  Gutenberg) and, among the platforms, the Home Assistant voice
+  integration and web browsers. Blank lines are left out only when the
+  screen is too short to show them.
+- **The Add menu** reads T)hiagoBodruk and S)crollMapper, so the letter
+  to press shows as a capital.
+
 ## 2.19.2
 
 - **Project Gutenberg's texts from its mirror first.** P under A, and
