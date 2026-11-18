@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.20.2
+
+- **The spinner in every long step**, not only while downloading: while
+  a new translation's text is read, its books written and its index
+  built, too, so no step looks stuck on a slow device.
+
 ## 2.20.1
 
 - **A spinner while a download waits.** When adding a translation (**A**),
