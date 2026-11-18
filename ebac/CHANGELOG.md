@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.20.3
+
+- **Asking for another Project Gutenberg ebook.** For an ebook EBaC
+  can't add yet, it now gives the address of a form on GitHub for
+  asking, with the ebook's number already filled in.
+
 ## 2.20.2
 
 - **The spinner in every long step**, not only while downloading: while
