@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.22.1
+
+- **A spinner while the names of the languages are downloaded**, the
+  first time the translations of thiagobodruk/bible or
+  scrollmapper/bible_databases are listed: it could take a while on a
+  slow computer, with nothing moving.
+
 ## 2.22.0
 
 - **The mouse's wheel, slower.** On a passage, a notch of the wheel
