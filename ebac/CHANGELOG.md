@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.22.0
+
+- **The mouse's wheel, slower.** On a passage, a notch of the wheel
+  goes on (or back) one verse, not four or more. On the search
+  results, it goes a screen on or back, rather than bringing up the
+  help; two or three notches turned a little are still one screen, so
+  no results go by unseen. Turning it longer goes on.
+- **. and , on the search results** go a screen on and back, as n and p
+  do, and as they go a verse on the passage.
+- **Clicks on a menu's words** are no longer missed when the mouse
+  moves a little as it clicks.
+
 ## 2.21.0
 
 - **The Hebrew letters in Psalm 119, on lines of their own.** Many
