@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.21.0
+
+- **The Hebrew letters in Psalm 119, on lines of their own.** Many
+  translations print the Hebrew letter that begins each stanza of
+  Psalm 119 as a word in the verse ("...with all their hearts. Beth").
+  It now has its own line, with "---" in the margin, as other notes do,
+  so it can't be mistaken for the verse's words; Aleph comes before
+  119:1. The same in the other acrostics, where a translation marks
+  them (Lamentations, Proverbs 31, and several psalms). A translation
+  added before keeps its old text until you remove it and add it again.
+
 ## 2.20.3
 
 - **Asking for another Project Gutenberg ebook.** For an ebook EBaC
