@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.22.2
+
+- **LARGER and smaller on the main menu** can be clicked or tapped: the
+  word itself, the space around it, or half a row above or below makes
+  the letters larger or smaller, as F and f do, without bringing up the
+  keyboard.
+
 ## 2.22.1
 
 - **A spinner while the names of the languages are downloaded**, the
