@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.24.0
+
+- **The bell is heard, and seen.** Where EBaC beeps (nowhere to go, as
+  at Genesis 1:1, or no room for another key), the page now plays a
+  short beep, turns the screen white for a moment, and on a phone that
+  can, buzzes briefly. Before, nothing happened. The sound needs a key
+  or a tap on the page first, as browsers require.
+
 ## 2.23.0
 
 - **Text uses the screen's last column.** Verses wrapped one column
