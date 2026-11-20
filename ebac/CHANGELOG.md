@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.23.0
+
+- **Text uses the screen's last column.** Verses wrapped one column
+  short, leaving the last column always empty (the left one in Hebrew
+  and other right-to-left languages); now lines reach the edge.
+- **No row left empty at the bottom** of a passage when the next verse
+  would just fit: a verse ending with a space, its last line exactly
+  full, was counted a line taller than it is.
+
 ## 2.22.2
 
 - **LARGER and smaller on the main menu** can be clicked or tapped: the
