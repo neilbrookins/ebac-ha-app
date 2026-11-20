@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.25.0
+
+- **The beep, the flash and the buzz can each be turned off**, in the
+  app's Configuration tab: **Beep**, **Flash the screen** and
+  **Vibrate**. All three are on unless you turn them off: the beep could
+  wake someone asleep nearby, and a flash could harm someone with
+  photosensitive epilepsy.
+
 ## 2.24.0
 
 - **The bell is heard, and seen.** Where EBaC beeps (nowhere to go, as

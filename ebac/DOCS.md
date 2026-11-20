@@ -77,6 +77,10 @@ To make the text larger or smaller, pinch: spread two fingers apart for larger, 
 
 Some phone keyboards, such as the Amazon keyboard on a Fire tablet, hold back what you type until a word is finished. EBaC takes each letter from them at once, so a single key at the main menu works without pressing space after it, and a book's name is completed as you type it.
 
+### The beep
+
+Where EBaC beeps (at Genesis 1:1 with nowhere to go back to, or with no room for another key), the page plays a short beep, turns the screen white for a moment, and on an Android phone, buzzes briefly. The beep is heard only after you've pressed a key or tapped the page once, as browsers require. Each of the three can be turned off in the app's **Configuration** tab: **Beep**, **Flash the screen** and **Vibrate**.
+
 ### If you use the Home Assistant Companion app
 
 The Companion app has its own gestures, under **Settings → Companion app → Gestures**, and it acts on them as well as passing them to EBaC. If a two-finger swipe there is set to do something, such as refreshing the page, a two-finger swipe in EBaC does both: the Companion app's action first (a refresh asks whether to leave the page), and then EBaC's jump to the next or previous book.

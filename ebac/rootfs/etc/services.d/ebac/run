@@ -27,6 +27,15 @@ if bashio::config.true 'debug_overlay'; then
     export EBAC_DEBUG=true
 fi
 
+# The bell (EBaC's Ctrl-G): the beep, the flash, the buzz, each unless its
+# option is off (see ebac-web).
+for part in sound flash vibrate; do
+    if bashio::config.false "bell_${part}"; then
+        bashio::log.info "The bell: no ${part} (bell_${part})"
+        export "EBAC_BELL_$(echo "${part}" | tr '[:lower:]' '[:upper:]')=false"
+    fi
+done
+
 # ttyd with EBaC in it, as in EBaC's standalone image (ebac-web, shared
 # with it). --auth-header: Home Assistant's ingress adds the logged-in
 # user's name in X-Remote-User-Name; ttyd passes it to ebac-session as

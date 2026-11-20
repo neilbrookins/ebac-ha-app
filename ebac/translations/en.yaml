@@ -1,4 +1,21 @@
 configuration:
+  bell_sound:
+    name: Beep
+    description: >-
+      Where EBaC beeps (nowhere to go, as at Genesis 1:1, or no room for
+      another key), play a short beep. Turn it off if it would disturb
+      someone, such as someone asleep nearby.
+  bell_flash:
+    name: Flash the screen
+    description: >-
+      Where EBaC beeps, turn the screen white for a moment (0.15 seconds).
+      Turn it off if flashing could be harmful, such as for someone with
+      photosensitive epilepsy.
+  bell_vibrate:
+    name: Vibrate
+    description: >-
+      Where EBaC beeps, buzz briefly, on a phone that can (Android; an
+      iPhone doesn't let a page vibrate).
   allow_add:
     name: Allow voice to add translations
     description: >-
