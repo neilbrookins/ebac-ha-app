@@ -172,6 +172,10 @@ Added translations are kept in this app's own storage, so they are kept when the
 
 The languages and translations are read from where EBaC downloads them each time, so new ones appear on their own. The names of the languages come from Unicode's language database; the first time you press **A**, and once a month after, EBaC fetches them, which takes a few seconds. Some languages, such as Chinese, Japanese and Thai, are often written without spaces between words; EBaC searches word by word, so it notes that searching such a translation works poorly.
 
+#### Headings a translation adds
+
+Some translations run a heading of their own into the verses as plain words: Psalm 119's letters (`...with all their hearts. Beth`, before the stanza that starts with that letter) and the Song of Songs' speakers (`...more wonderful than any other. Young Woman`, before the words she speaks). EBaC finds them as a translation is added, in any language, and shows each on its own line with **===** in the margin, so they don't read as part of the verse; voice (Assist) doesn't say them. Where a translation's source leaves one out (thiagobodruk/bible's New Living Translation has none before a chapter's first verse), EBaC doesn't add it. A translation you added before this shows them as it did (Psalm 119's letters with **---**) until you remove it and add it again.
+
 #### Right-to-left text
 
 Hebrew, Arabic and other right-to-left text is shown right to left, each line that is mostly right to left aligned on the right. With such a translation chosen, the search line is right to left too, and text you highlight on the screen is copied in reading order, so you can paste it into a search.

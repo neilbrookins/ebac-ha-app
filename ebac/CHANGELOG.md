@@ -1,5 +1,18 @@
 # Changelog
 
+## 2.26.0
+
+- **The Song of Songs' speakers are set apart.** Translations that name
+  who speaks ("Young Woman", "Young Man" in the New Living Translation;
+  "Beloved", "Lover" in the World English Bible; "She", "He" in the
+  NIV) ran the names into the verses as plain words. Now each is on a
+  line of its own with **===** in the margin, and voice doesn't say it.
+  Found as a translation is added, in any language.
+- **Psalm 119's letters** (Aleph, Beth...) are marked **===** too, as
+  headings, rather than **---** as notes.
+- A translation you added before this keeps its old layout until you
+  remove it and add it again.
+
 ## 2.25.0
 
 - **The beep, the flash and the buzz can each be turned off**, in the
