@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.27.0
+
+- **The mouse's wheel goes faster when turned fast.** On a passage, a
+  wheel turned quickly kept only its first notch or two; now each notch
+  goes on a verse, while one notch still goes just one.
+- **A hand where a click does something.** With a mouse, the pointer
+  turns into a hand over a choice that a click would make, as over a
+  link.
+- **A blank row under "Main Menu"**, so clicking the heading no longer
+  brings up the list of translations.
+
 ## 2.26.0
 
 - **The Song of Songs' speakers are set apart.** Translations that name
