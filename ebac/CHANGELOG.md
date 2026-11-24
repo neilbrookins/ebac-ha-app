@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.27.1
+
+- **The mouse's wheel faster still** on a passage, when turned quickly;
+  one notch still goes on just one verse.
+
 ## 2.27.0
 
 - **The mouse's wheel goes faster when turned fast.** On a passage, a
